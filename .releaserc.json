@@ -1,0 +1,21 @@
+{
+  "branches": ["main"],
+  "release": {
+    "branches": ["main"]
+  },
+  "plugins": [
+    "@semantic-release/commit-analyzer",
+    "@semantic-release/release-notes-generator",
+    [
+      "@semantic-release/github",
+      {
+        "assets": [
+          { "path": "bin/linux64/*", "label": "Linux 64 bit" },
+          { "path": "bin/macM/*", "label": "Mac with Apple Silicon (M) processor" },
+          { "path": "bin/mac64/*", "label": "Mac with Intel processor" },
+          { "path": "bin/windows64/*", "label": "Windows 64 bit" }
+        ]
+      }
+    ]
+  ]
+}
