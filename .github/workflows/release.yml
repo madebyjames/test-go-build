@@ -21,16 +21,16 @@ jobs:
         run: go mod download
 
       - name: Build Linux 64
-        run: GOOS=linux GOARCH=amd64 go build -o ./bin/linux64/
+        run: GOOS=linux GOARCH=amd64 go build -o ./bin/test-go-linux64
 
       - name: Build Mac Apple Silicon
-        run: GOOS=darwin GOARCH=arm64 go build -o ./bin/macM/
+        run: GOOS=darwin GOARCH=arm64 go build -o ./bin/test-go-mac-m
 
       - name: Build Mac Intel 64
-        run: GOOS=darwin GOARCH=amd64 go build -o ./bin/mac64/
+        run: GOOS=darwin GOARCH=amd64 go build -o ./bin/test-go-mac-intel
 
       - name: Build Windows 64
-        run: GOOS=windows GOARCH=amd64 go build -o ./bin/windows64/
+        run: GOOS=windows GOARCH=amd64 go build -o ./bin/test-go-windows-64.exe
 
       - name: Generate release
         env:
