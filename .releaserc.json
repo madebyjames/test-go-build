@@ -10,10 +10,10 @@
       "@semantic-release/github",
       {
         "assets": [
-          { "path": "bin/linux64/*", "label": "Linux 64 bit" },
-          { "path": "bin/macM/*", "label": "Mac with Apple Silicon (M) processor" },
-          { "path": "bin/mac64/*", "label": "Mac with Intel processor" },
-          { "path": "bin/windows64/*", "label": "Windows 64 bit" }
+          { "path": "bin/linux64/*", "name": "test-linux", "label": "Linux 64 bit" },
+          { "path": "bin/macM/*", "name": "test-mac-m", "label": "Mac with Apple Silicon (M) processor" },
+          { "path": "bin/mac64/*", "name": "test-mac-intel", "label": "Mac with Intel processor" },
+          { "path": "bin/windows64/*", "name": "test-windows", "label": "Windows 64 bit" }
         ]
       }
     ]
