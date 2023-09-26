@@ -21,11 +21,11 @@ jobs:
         run: go mod download
 
       - name: Install release dependencies
-        run: npm install -g @semantic-release/exec
+        run: npm install -g semantic-release @semantic-release/exec
 
       - name: Generate release
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        run: npx semantic-release
+        run: semantic-release
 
 
